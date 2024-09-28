@@ -11,6 +11,6 @@ użycie:
 pobrać repo, w folderze użyć komendy "node index.js"
 
 aktualne ścieżki:
-localhost:8080
+localhost:8080 :
     /
     /makroregions
