@@ -1,0 +1,11 @@
+{
+  "name": "mapofpoland",
+  "version": "1.0.0",
+  "description": "map of poland quiz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bejmach",
+  "license": "ISC"
+}

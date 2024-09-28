@@ -1,0 +1,10 @@
+nav{
+	border: solid black 2px;
+	height: 50px;
+	align-content: center;
+}
+a{
+	border: black solid 1px;
+	padding: 5px;
+	margin: 3px;
+}
