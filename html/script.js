@@ -13,6 +13,8 @@ window.onload = function() {
 
   const name = document.getElementById('name');
   const points = document.getElementById('points');
+
+  const chosen = document.getElementById('chosen');
   
   // Set this variable to any image source
   const IMAGE_SRC = 'http://localhost:8080/makroregionyRaw.png';
@@ -160,6 +162,7 @@ window.onload = function() {
     let mouseY = e.offsetY;
     let colorData = ctx.getImageData(mouseX, mouseY, 1, 1).data;
     let rgb = `${colorData[0]};${colorData[1]};${colorData[2]}`;
+    chosen.innerHTML = nameArray[colorArray.indexOf(rgb)];
     
     coordinates.innerHTML = `X: ${mouseX}, Y: ${mouseY}`;
     color.innerHTML = rgb;

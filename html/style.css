@@ -9,7 +9,7 @@ a{
 	margin: 3px;
 }
 div{
-	margin: 10px;
+	margin: 0 10px;
 }
 .flex{
 	display: flex;
