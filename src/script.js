@@ -94,9 +94,11 @@ window.onload = function () {
         ctx.drawImage(img, 0, 0);
     }, false);
 
-    // This is important to avoid cross origin errors
-    img.crossOrigin = "";
+    
     img.src = IMAGE_SRC;
+
+    // This is important to avoid cross origin errors
+    img.crossOrigin = '';
 
     let pointCounter = 0;
 
@@ -110,6 +112,7 @@ window.onload = function () {
         let mouseY = e.offsetY;
         let colorData = ctx.getImageData(mouseX, mouseY, 1, 1).data;
         let rgb = `${colorData[0]};${colorData[1]};${colorData[2]}`;
+        console.log(rgb);
 
         const chosenRegion = regions.find(r => r.rgb === rgb);
         if (chosenRegion === undefined) return;
