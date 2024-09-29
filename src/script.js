@@ -17,7 +17,7 @@ window.onload = function() {
   const chosen = document.getElementById('chosen');
   
   // Set this variable to any image source
-  const IMAGE_SRC = 'http://localhost:8080/makroregionyRaw.png';
+  const IMAGE_SRC = 'makroregionyRaw.png';
 
   const colorArray = ["89;78;237", 
     "56;45;207", 
@@ -146,10 +146,11 @@ window.onload = function() {
     img.addEventListener('load', function() {
         ctx.drawImage(img, 0, 0);
     }, false);
-  img.src = IMAGE_SRC;
-  // This is important to avoid cross origin errors
-  img.setAttribute('crossOrigin', '');
 
+  // This is important to avoid cross origin errors
+  img.crossOrigin = "";
+  img.src = IMAGE_SRC;
+  
   var randomId = RandomInt(nameArray.length);
   name.innerHTML = nameArray[randomId];
   var pointCounter = 0;
