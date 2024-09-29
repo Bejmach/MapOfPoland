@@ -55,7 +55,7 @@ window.onload = function() {
     "213;106;8",
     "189;112;42",
     "255;176;104",
-    "219;144;255",
+    "219;144;76",
     "255;217;81",
     "219;183;52",
     "192;155;18",
@@ -66,7 +66,7 @@ window.onload = function() {
     "69;69;69",
     "165;165;165",
     "198;198;198",
-    "0,216;65",
+    "0;216;65",
     "123;162;102",
     "66;135;29",
     "56;159;0",
@@ -162,7 +162,7 @@ window.onload = function() {
     let mouseY = e.offsetY;
     let colorData = ctx.getImageData(mouseX, mouseY, 1, 1).data;
     let rgb = `${colorData[0]};${colorData[1]};${colorData[2]}`;
-    chosen.innerHTML = nameArray[colorArray.indexOf(rgb)];
+    chosen.innerHTML =  nameArray[colorArray.indexOf(rgb)];
     
     coordinates.innerHTML = `X: ${mouseX}, Y: ${mouseY}`;
     color.innerHTML = rgb;
