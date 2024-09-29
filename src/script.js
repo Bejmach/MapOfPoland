@@ -165,8 +165,8 @@ window.onload = function() {
     let rgb = `${colorData[0]};${colorData[1]};${colorData[2]}`;
     chosen.innerHTML =  nameArray[colorArray.indexOf(rgb)];
     
-    coordinates.innerHTML = `X: ${mouseX}, Y: ${mouseY}`;
-    color.innerHTML = rgb;
+    //coordinates.innerHTML = `X: ${mouseX}, Y: ${mouseY}`;
+    //color.innerHTML = rgb;
 
     if(colorArray[randomId] == rgb){
       randomId = RandomInt(nameArray.length);
