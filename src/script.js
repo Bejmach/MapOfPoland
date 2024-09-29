@@ -94,11 +94,11 @@ window.onload = function () {
         ctx.drawImage(img, 0, 0);
     }, false);
 
-    
+    img.crossOrigin = '';
     img.src = IMAGE_SRC;
 
     // This is important to avoid cross origin errors
-    img.crossOrigin = '';
+    
 
     let pointCounter = 0;
 
