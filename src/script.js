@@ -152,9 +152,9 @@ window.onload = function() {
   img.src = IMAGE_SRC;
   
   var randomId = RandomInt(nameArray.length);
-  name.innerHTML = nameArray[randomId];
+  name.innerText = nameArray[randomId];
   var pointCounter = 0;
-  points.innerHTML = pointCounter;
+  points.innerText = pointCounter;
   
   // Add a function to the mousemove event to get pixel data
   // NOTE: You should probably debounce this
@@ -163,16 +163,16 @@ window.onload = function() {
     let mouseY = e.offsetY;
     let colorData = ctx.getImageData(mouseX, mouseY, 1, 1).data;
     let rgb = `${colorData[0]};${colorData[1]};${colorData[2]}`;
-    chosen.innerHTML =  nameArray[colorArray.indexOf(rgb)];
+    chosen.innerText =  nameArray[colorArray.indexOf(rgb)];
     
-    //coordinates.innerHTML = `X: ${mouseX}, Y: ${mouseY}`;
-    //color.innerHTML = rgb;
+    //coordinates.innerText = `X: ${mouseX}, Y: ${mouseY}`;
+    //color.innerText = rgb;
 
     if(colorArray[randomId] == rgb){
       randomId = RandomInt(nameArray.length);
-      name.innerHTML = nameArray[randomId];
+      name.innerText = nameArray[randomId];
       pointCounter+=1;
-      points.innerHTML = pointCounter;
+      points.innerText = pointCounter;
     }
   }  
 }
