@@ -18,7 +18,9 @@ Druga wartość to kolor RGB tego obszaru, używany do wykrywania gdzie kliknies
 
 ### Użycie
 
-Uruchomić plik `src/index.html` w przeglądarce. Jeśli są problemy z mapą, to postawić serwer (np. `python3 -m http.server`) w folderze `src` i uruchomić localhosta w przeglądarce.
+Uruchomić plik `docs/index.html` w przeglądarce. Jeśli są problemy z mapą, to postawić serwer (np. `python3 -m http.server`) w folderze `docs` i uruchomić localhosta w przeglądarce.
+
+Można też odpalić zahostowaną stronę: [LINK](https://bejmach.github.io/MapOfPoland)
 
 ### Autorzy
 - [Bejmach](https://github.com/Bejmach) (oryginalny projekt)
