@@ -65,3 +65,20 @@ div {
 #canvas_container.hardcore {
 	filter: grayscale(0.9);
 }
+#myProgress {
+    width: 100%;
+    background-color: grey;
+    position: absolute;
+    bottom: 5px;
+}
+  
+#myBar {
+    width: 0%;
+    height: 30px;
+    background-color: red;
+}
+#overlayText{
+    z-index: 10;
+    text-align: center;
+    position: relative;
+}

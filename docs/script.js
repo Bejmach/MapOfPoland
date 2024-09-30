@@ -72,6 +72,72 @@ const regions = [
 ];
 
 window.onload = function () {
+    var experience = 0;
+    var lvl = 1;
+    var expCap = 2;
+    var curFibonachi = 3;
+
+    const lvlBar = document.createElement("div");
+    var progress = document.createElement("div");
+    const lvlText = document.createElement("p");
+    progress.id = "myProgress";
+    lvlBar.id = "myBar";
+    lvlText.id = "overlayText"
+    progress.appendChild(lvlText);
+    progress.appendChild(lvlBar);
+    document.body.appendChild(progress);
+
+    function fibonachiNumber(point){
+        if(point == 0){
+            return 0;
+        }
+        else if(point==2||point==1){
+            return 1;
+        }
+        else{
+            var loop = 1;
+            var a = 1;
+            var b = 1;
+            while(loop<point){
+                if(loop%2!=0){
+                    a = a+b;
+                }
+                else{
+                    b=a+b;
+                }
+                loop+=1;
+            }
+            if(a>b){
+                return a;
+            }
+            return b;
+        }
+    }
+
+    function moveBar(curAmmount, maxAmmount){
+        var width = Math.ceil(curAmmount/maxAmmount*100);
+        lvlBar.style.width = width+"%";
+    }
+
+    moveBar(experience, expCap);
+    lvlText.innerHTML = experience+"/"+expCap+", cur lvl="+lvl;
+    
+    function expUp(){
+        experience+=1;
+        if(experience>=expCap){
+            lvl+=1;
+            curFibonachi+=1;
+            expCap = fibonachiNumber(curFibonachi);
+            experience = 0;
+            if(expCap<=0){
+                console.log("Wow. Int overload... that was so unexpected... If your testing this library, then I understand how you got here, else... go touch some grass, pls");
+            }
+        }
+        moveBar(experience, expCap);
+        lvlText.innerHTML = experience+"/"+expCap+", cur lvl="+lvl;
+    
+    }
+
     // Get the HTML Canvas
     const canvas = document.getElementById("image_canvas");
     // Get the canvas context
@@ -124,6 +190,7 @@ window.onload = function () {
             name.innerText = randomRegion.name;
             pointCounter += 1;
             points.innerText = pointCounter;
+            expUp()
         }
     };
 };
