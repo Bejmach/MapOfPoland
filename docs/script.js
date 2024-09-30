@@ -77,15 +77,9 @@ window.onload = function () {
     var expCap = 2;
     var curFibonachi = 3;
 
-    const lvlBar = document.createElement("div");
-    var progress = document.createElement("div");
-    const lvlText = document.createElement("p");
-    progress.id = "myProgress";
-    lvlBar.id = "myBar";
-    lvlText.id = "overlayText"
-    progress.appendChild(lvlText);
-    progress.appendChild(lvlBar);
-    document.body.appendChild(progress);
+    const lvlBar = document.getElementById("myBar");
+    var progress = document.getElementById("MyProgress");
+    const lvlText = document.getElementById("overlayText");
 
     function fibonachiNumber(point){
         if(point == 0){
