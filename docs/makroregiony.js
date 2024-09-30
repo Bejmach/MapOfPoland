@@ -71,12 +71,12 @@ const regions = [
     new Region("Beskidy Lesiste", "10;181;186")
 ];
 
-
 function getLocalStgOr(key, default_value) {
     x = localStorage.getItem(key);
     if (x === null) return default_value;
     else return Number(x);
 }
+
 function saveXPAndLvl(xp, lvl) {
     localStorage.setItem("xp", xp);
     localStorage.setItem("lvl", lvl);
@@ -111,7 +111,7 @@ window.onload = function () {
                 }
                 loop += 1;
             }
-            if(a > b){
+            if (a > b) {
                 return a;
             }
             return b;
@@ -139,7 +139,9 @@ window.onload = function () {
                 console.log("Wow. Int overload... that was so unexpected... If your testing this library, then I understand how you got here, else... go touch some grass, pls");
             }
         }
+
         saveXPAndLvl(experience, lvl);
+
         moveBar(experience, expCap);
         lvlText.innerText = experience + "/" + expCap + " XP, level " + lvl;
     }

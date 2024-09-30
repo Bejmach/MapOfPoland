@@ -65,6 +65,7 @@ div {
 #canvas_container.hardcore {
 	filter: grayscale(0.9);
 }
+
 #myProgress {
 	width: 100%;
 	background-color: grey;
@@ -72,7 +73,7 @@ div {
 	left: 0;
 	bottom: 0px;
 }
-  
+
 #myBar {
 	width: 0%;
 	height: 15px;
@@ -80,6 +81,7 @@ div {
 	transition: width 150ms;
 	border-radius: 8px;
 }
+
 #overlayText {
 	z-index: 10;
 	text-align: center;
