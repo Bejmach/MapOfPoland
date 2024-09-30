@@ -71,76 +71,88 @@ const regions = [
     new Region("Beskidy Lesiste", "10;181;186")
 ];
 
+
+function getLocalStgOr(key, default_value) {
+    x = localStorage.getItem(key);
+    if (x === null) return default_value;
+    else return Number(x);
+}
+function saveXPAndLvl(xp, lvl) {
+    localStorage.setItem("xp", xp);
+    localStorage.setItem("lvl", lvl);
+}
+
 window.onload = function () {
-    var experience = 0;
-    var lvl = 1;
-    var expCap = 2;
-    var curFibonachi = 3;
+    let experience = getLocalStgOr("xp", 0);
+    let lvl = getLocalStgOr("lvl", 1);
+    let curFibonachi = 2 + lvl;
+    let expCap = fibonachiNumber(curFibonachi);
 
-    const lvlBar = document.getElementById("myBar");
-    var progress = document.getElementById("MyProgress");
-    const lvlText = document.getElementById("overlayText");
+    const lvlBar = document.querySelector("#myBar");
+    const lvlText = document.querySelector("#overlayText");
 
-    function fibonachiNumber(point){
-        if(point == 0){
+    function fibonachiNumber(point) {
+        if (point == 0) {
             return 0;
         }
-        else if(point==2||point==1){
+        else if (point == 2 || point == 1) {
             return 1;
         }
-        else{
-            var loop = 1;
-            var a = 1;
-            var b = 1;
-            while(loop<point){
-                if(loop%2!=0){
-                    a = a+b;
+        else {
+            let loop = 1;
+            let a = 1;
+            let b = 1;
+            while (loop < point) {
+                if (loop % 2 != 0) {
+                    a = a + b;
                 }
-                else{
-                    b=a+b;
+                else {
+                    b = a + b;
                 }
-                loop+=1;
+                loop += 1;
             }
-            if(a>b){
+            if(a > b){
                 return a;
             }
             return b;
         }
     }
 
-    function moveBar(curAmmount, maxAmmount){
-        var width = Math.ceil(curAmmount/maxAmmount*100);
-        lvlBar.style.width = width+"%";
+    function moveBar(curAmmount, maxAmmount) {
+        var width = Math.ceil(curAmmount / maxAmmount * 100);
+        lvlBar.style.width = width + "%";
     }
 
     moveBar(experience, expCap);
-    lvlText.innerHTML = experience+"/"+expCap+", cur lvl="+lvl;
-    
-    function expUp(){
-        experience+=1;
-        if(experience>=expCap){
-            lvl+=1;
-            curFibonachi+=1;
+    lvlText.innerText = experience + "/" + expCap + " XP, level " + lvl;
+    function expUp() {
+        experience += 1;
+        updateXP();
+    }
+    function updateXP() {
+        if (experience >= expCap) {
+            lvl += 1;
+            curFibonachi += 1;
             expCap = fibonachiNumber(curFibonachi);
             experience = 0;
-            if(expCap<=0){
+            if (expCap <= 0) {
                 console.log("Wow. Int overload... that was so unexpected... If your testing this library, then I understand how you got here, else... go touch some grass, pls");
             }
         }
+        saveXPAndLvl(experience, lvl);
         moveBar(experience, expCap);
-        lvlText.innerHTML = experience+"/"+expCap+", cur lvl="+lvl;
-    
+        lvlText.innerText = experience + "/" + expCap + " XP, level " + lvl;
     }
 
     // Get the HTML Canvas
-    const canvas = document.getElementById("image_canvas");
+    const canvas = document.querySelector("#image_canvas");
     // Get the canvas context
     const ctx = canvas.getContext('2d');
 
-    const name = document.getElementById('name');
-    const points = document.getElementById('points');
+    const name = document.querySelector('#name');
+    const points = document.querySelector('#points');
 
-    const chosen = document.getElementById('chosen');
+    const chosen = document.querySelector('#chosen');
 
     // Set this variable to any image source
     const IMAGE_SRC = 'makroregionyRaw.png';
@@ -159,7 +171,6 @@ window.onload = function () {
 
     // This is important to avoid cross origin errors
     
-
     let pointCounter = 0;
 
     let randomRegion = regions[RandomInt(regions.length)];
@@ -184,7 +195,7 @@ window.onload = function () {
             name.innerText = randomRegion.name;
             pointCounter += 1;
             points.innerText = pointCounter;
-            expUp()
+            expUp();
         }
     };
 };
