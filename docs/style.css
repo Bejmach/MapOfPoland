@@ -68,10 +68,11 @@ div {
 
 #myProgress {
 	width: 100%;
-	background-color: grey;
+	background-color: #464646;
 	position: sticky;
 	left: 0;
 	bottom: 0px;
+	margin: 0;
 }
 
 #myBar {
