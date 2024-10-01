@@ -70,9 +70,9 @@ div {
 #myProgress {
 	width: 100%;
 	background-color: #464646;
-	position: sticky;
+	position: fixed;
 	left: 0;
-	bottom: 0px;
+	bottom: 0;
 	margin: 0;
 }
 
