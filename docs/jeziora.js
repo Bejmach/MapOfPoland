@@ -20,7 +20,7 @@ const regions = [
     new Region("Rożnowskie", "81;130;216"),
     new Region("Gopło", "95;116;153"),
     new Region("Włocławskie", "73;125;216"),
-    new Region("Chażykowskie", "44;109;222"),
+    new Region("Charzykowskie", "44;109;222"),
     new Region("Wdzydze", "0;32;87"),
     new Region("Jeziorak", "40;60;96"),
     new Region("Śniardwy", "50;78;126"),
