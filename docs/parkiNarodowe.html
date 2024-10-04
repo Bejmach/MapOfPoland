@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parki Narodowe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <div class="flex">
+    <div id="name">Nazwa regionu</div>
+  </div>
+  <div class="flex">
+    <div id="points"></div>
+  </div><br>
+  <div class="flex">
+    <div id="chosen">> Nie wybrano regionu</div>
+  </div>
+  <div class="flex">
+    <input type="checkbox" name="hardcore" id="hardcore_checkbox">
+    <label for="hardcore_checkbox">Symulacja papieru</label>
+  </div>
+</header>
+<div id="canvas_container">
+  <canvas id="image_canvas" class="image_canvas" width="800" height="700">
+    Your browser does not support the canvas element.
+  </canvas>
+</div>
+<div id="myProgress">
+  <div id="myBar"></div>
+  <p id="overlayText"></p>
+</div>
+
+
+<script src="parkiNarodowe.js"></script>
+</body>
+
+</html>
