@@ -95,7 +95,7 @@ const canvasContainer = document.querySelector("#canvas_container");
 document.querySelector("#hardcore_checkbox").addEventListener("change", e => {
     if (e.currentTarget.checked) {
         canvasContainer.classList.add("hardcore");
-    }//new line here, react lover suggestion
+    }
     else {
         canvasContainer.classList.remove("hardcore");
     }
