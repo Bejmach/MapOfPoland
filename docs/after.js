@@ -76,7 +76,7 @@ window.onload = function () {
         //console.log(rgb);
 
         const chosenRegion = regions.find(r => r.rgb === rgb);
-        if (chosenRegion === undefined) return;
+        if (!chosenRegion) return;
 
         chosen.innerText = "> " + chosenRegion.name;
 
