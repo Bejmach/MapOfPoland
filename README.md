@@ -27,3 +27,4 @@ Można też odpalić zahostowaną stronę: [LINK](https://bejmach.github.io/MapO
 - [Buszewicz](https://github.com/Buszewicz) (małe poprawki i parki narodowe)
 - [Janek](https://github.com/creeper82) (poprawki i wycofanie Node.JS)
 - [Maksym](https://github.com/iLoveReact) (sugestie do refaktoru)
+- 
