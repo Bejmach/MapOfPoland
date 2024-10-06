@@ -18,7 +18,7 @@ Druga wartość to kolor RGB tego obszaru, używany do wykrywania gdzie kliknies
 
 ### Użycie
 
-Uruchomić plik `docs/index.html` w przeglądarce. Jeśli są problemy z mapą, to postawić serwer (np. `python3 -m http.server`) w folderze `docs` i uruchomić localhosta w przeglądarce.
+Uruchomić plik `docs/index.html` w przeglądarce. Postawić serwer http (np. `python3 -m http.server`) w folderze `docs`, bo inaczej mapa nie działa i uruchomić localhosta w przeglądarce.
 
 Można też odpalić zahostowaną stronę: [LINK](https://bejmach.github.io/MapOfPoland)
 
@@ -26,3 +26,5 @@ Można też odpalić zahostowaną stronę: [LINK](https://bejmach.github.io/MapO
 - [Bejmach](https://github.com/Bejmach) (oryginalny projekt)
 - [Buszewicz](https://github.com/Buszewicz) (małe poprawki i parki narodowe)
 - [Janek](https://github.com/creeper82) (poprawki i wycofanie Node.JS)
+- [Maksym](https://github.com/iLoveReact) (sugestie do refaktoru)
+- 
