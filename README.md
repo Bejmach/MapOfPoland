@@ -2,8 +2,8 @@
 
 Responsywna stronka do nauki regionów Polski napisana na szybko.
 
-Jeżeli chcesz przyczynić się do rozwoju,  prześlij mapę z każdym regionem/rzeką/górą itd.  zaznaczoną innym kolorem oraz wyślij listę z przypisanym kolorem do nazwy.  Aktualnie brakuje rzek,  szczytów,  pasm górskich,  jezior.  (jeżeli zapomniałem czegoś na kartówkę to proszę przypomnieć.)  
-Postaram się rozwijać wraz z przyszłymi testami,  oraz tym co zostanie z map wysłane.
+Jeżeli chcesz przyczynić się do rozwoju,  prześlij mapę z każdym regionem/rzeką/górą itd.  zaznaczoną innym kolorem oraz wyślij listę z przypisanym kolorem do nazwy.
+Postaram się rozwijać w przyszłości gdy będę mieć czas i chęci
 
 ### Przykład regionu
 W pliku `script.js`:
