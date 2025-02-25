@@ -73,7 +73,7 @@ window.onload = function () {
         let colorData = ctx.getImageData(mouseX, mouseY, 1, 1).data;
         let rgb = `${colorData[0]};${colorData[1]};${colorData[2]}`;
         //stays for debugging
-        //console.log(rgb);
+        console.log(rgb);
 
         const chosenRegion = regions.find(r => r.rgb === rgb);
         if (!chosenRegion) return;
