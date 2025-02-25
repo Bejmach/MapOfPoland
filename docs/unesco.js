@@ -14,7 +14,7 @@ const regions = [
 	new Region("Warszawa stare miasto", "12;0;119"),
 	new Region("Puszcza białowieska", "186;178;255"),
 	new Region("Toruń stare miasto", "122;115;187"),
-	new Region("Malbork zamek", "65;58;130")
+	new Region("Malbork zamek", "65;58;130")//if this is not updated on next commit, i leave it broken
     ];
 
 const IMAGE_SRC = 'unescoRaw.png';
